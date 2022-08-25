@@ -230,7 +230,11 @@ updateSparseGRM = function(SparseGRM, subjData)
   
   # if(any(!is.element(subjData, ID1)))
   #   stop("At least one of subjects is not in SparseGRM.")
+
+  print(head(SparseGRM))
+
   print(head(subjData))
+
   print(head(ID1))
 
   
