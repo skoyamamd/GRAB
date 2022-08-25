@@ -228,8 +228,11 @@ updateSparseGRM = function(SparseGRM, subjData)
   ID2 = tempGRM$ID2;
   value = tempGRM$VALUE;
   
-  if(any(!is.element(subjData, ID1)))
-    stop("At least one of subjects is not in SparseGRM.")
+  # if(any(!is.element(subjData, ID1)))
+  #   stop("At least one of subjects is not in SparseGRM.")
+  print(head(subjData))
+  print(head(ID1))
+
   
   location1 = match(ID1, subjData);
   location2 = match(ID2, subjData);
