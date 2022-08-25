@@ -223,7 +223,7 @@ updateSparseGRM = function(SparseGRM, subjData)
   
   tempGRM = rbind(tempGRM1, tempGRM2)
   # tempGRM = tempGRM[-1*which(duplicated(tempGRM)),]
-  tempGRM = unique(tmpGRM)
+  tempGRM = unique(tempGRM)
   
   ID1 = tempGRM$ID1;
   ID2 = tempGRM$ID2;
