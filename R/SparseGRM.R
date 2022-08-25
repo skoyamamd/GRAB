@@ -222,14 +222,15 @@ updateSparseGRM = function(SparseGRM, subjData)
                         VALUE=tempGRM1$VALUE)
   
   tempGRM = rbind(tempGRM1, tempGRM2)
-  tempGRM = tempGRM[-1*which(duplicated(tempGRM)),]
+  # tempGRM = tempGRM[-1*which(duplicated(tempGRM)),]
+  tempGRM = unique(tmpGRM)
   
   ID1 = tempGRM$ID1;
   ID2 = tempGRM$ID2;
   value = tempGRM$VALUE;
   
-  # if(any(!is.element(subjData, ID1)))
-  #   stop("At least one of subjects is not in SparseGRM.")
+  if(any(!is.element(subjData, ID1)))
+    stop("At least one of subjects is not in SparseGRM.")
 
   print(head(SparseGRM))
 
